@@ -1,9 +1,11 @@
 import React from "react";
 
 import Navbar from "../../logged/navbar";
+import Menu from '../../logged/menu'
 
+import "../../../css/App/mutirae/mutirae.css"
 
-const OutsidePages = (props) => {
+const InsidePages = (props) => {
 	return (
 		<div className="wrapper">
 			<Navbar />
@@ -20,18 +22,7 @@ const OutsidePages = (props) => {
 					</div>
 				</nav>
 				<div id="conteudo">
-					<nav class="navbar navbar-expand-lg menu">
-						<div class="container">
-							<div class="navbar-nav">
-								<a class="menuItem" href="/timeline">
-									Home
-								</a>
-								<a class="menuItem" href="/sair">
-									Sair
-								</a>
-							</div>
-						</div>
-					</nav>
+					<Menu/>
 					<div class="render">{props.children}</div>
 				</div>
 			</div>
@@ -39,4 +30,4 @@ const OutsidePages = (props) => {
 	);
 };
 
-export default OutsidePages;
+export default InsidePages;

@@ -9,7 +9,7 @@ function Navbar() {
 				<div class="row justify-content-center ">
 					<img
 						src="img/together-w.png"
-						style="width:50px; height:50px;"
+						style={{width:"50px", height:"50px"}}
 						class="mr-3"
 					/>
 					<h3>Menu</h3>

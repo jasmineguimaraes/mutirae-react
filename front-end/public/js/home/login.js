@@ -1,6 +1,3 @@
-// JQuery
-//
-//
 $(document).ready(function(){
         $('#entrar').on('click', () =>{
             $('#telaLogin').css('display', 'block');

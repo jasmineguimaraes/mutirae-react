@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+
 import { connect } from 'react-redux';
 import { login } from "../redux/action/login";
 
@@ -24,6 +26,17 @@ class LoginBox extends React.Component{
     handleSubmit = (e) =>{
         e.preventDefault();
         //Fazer a verificaçao do usuario no bd
+        /*
+        axios({
+            method: "POST",
+            data: {
+              username: this.state.nome,
+              password: this.state.senha,
+            },
+            withCredentials: true,
+            url: "http://localhost:4000/login",
+          }).then((res) => console.log(res));
+          */
         this.props.login(true);
         this.setState({ nome: "", senha: "" });
     }
@@ -41,7 +54,7 @@ class LoginBox extends React.Component{
 
         return(
             <div id="telaLogin" style={divStyle}>
-                <div className={this.state.login != 'erro'? 'wrapper fadeInDown': 'wrapper'}>
+                <div className={this.state.login != 'erro'? 'wrapper-login fadeInDown': 'wrapper-login'}>
                     <div id="formContent">
                         <i id="icoIMG" className="far fa-times-circle"></i>
                         <br/>

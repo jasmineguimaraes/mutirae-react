@@ -1,9 +1,7 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import { connect } from 'react-redux'
+import history from './history';
 
-//import Navbar from './views/navbar'
-//import Footer from './views/footer'
-//import LoginBox from './views/loginBox'
 import OutsidePagesRoutes from "./views/templates/outside/outside-routes"
 import InsidePagesRoute from './views/templates/inside/inside-routes'
 
@@ -17,7 +15,7 @@ import Timeline from './views/logged/timeline'
 
 function App({isLogged}) {
 	return (
-    <Router>
+    <Router history={history}>
       <Switch>
         <OutsidePagesRoutes exact path="/" component={Index} />
         <OutsidePagesRoutes exact path="/recursos" component={Recursos} />

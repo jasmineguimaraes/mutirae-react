@@ -1,3 +1,7 @@
+import React from "react";
+
+import "../../css/App/timeline/timeline.css"
+
 function Timeline() {
     return(
         <div class="social-box">

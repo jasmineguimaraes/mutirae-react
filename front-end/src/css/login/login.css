@@ -22,7 +22,7 @@
 .btn-login:hover{
     cursor: pointer;
 }
-.wrapper {
+.wrapper-login {
     display: flex;
     align-items: center;
     flex-direction: column; 
