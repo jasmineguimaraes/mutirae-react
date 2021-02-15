@@ -1,0 +1,25 @@
+.icon-plus{
+    font-size: 40px;
+    color: #7386d5;
+}
+.icon-plus:hover{
+    font-size: 40px;
+    color: #4b578f;
+    cursor: pointer;
+}
+
+.texto-mutira{
+    border: 2px solid #7386d5;
+}
+.form-control:focus {
+    border-color: #7386d5;
+    box-shadow: 0 0 0.2rem rgba(115, 134, 213, .4);
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.card-item{
+    height: 400px;
+}

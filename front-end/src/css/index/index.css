@@ -1,0 +1,85 @@
+
+
+.animeRight{
+    opacity: 0;
+    transform: translate3d(-50px, 0px, 0px);
+    transition: .3s all ease;
+}
+.animeRight-init{
+    opacity: 1;
+    transition: .3s all ease;
+    transform: translate3d(0px, 0px, 0px);
+}
+.animeLeft{
+    opacity: 0;
+    transform: translate3d(50px, 0px, 0px);
+    transition: .3s all ease;
+}
+.animeLeft-init{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+
+.animeTop{
+    opacity: 0;
+    transform: translate3d(0px, 50px, 0px);
+    transition: .3s all ease;
+}
+.animeTop-init{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    transition: .3s all ease;
+}
+
+.container .btn-success{
+    background-color:#5867F0 ;
+    border-color: #5867F0;
+}
+
+.btn-outline-success {
+    color: #5867F0;
+    background-color: transparent;
+    border-color: #5867F0;
+}
+.btn-outline-success:hover{
+    color: white;
+    background-color: #5867F0;
+    border-color: #5867F0;
+}
+
+img.rounded{
+    border: 3px solid #5867F0;
+}
+
+/*INSCREVERSE*/
+
+.titulo-ins{
+    color:#5867F0;
+}
+.btn-success{
+    background-color: #5867F0;
+    border-color: #5867F0;
+}
+.btn-success:hover{
+    background-color: #434eb3;
+    border-color: #434eb3;
+}
+.form-control:focus{
+    border-color: #5867F0;
+    box-shadow:0 0 0 0.2rem rgb(82, 88, 139, 0.4);
+    
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+
+}
+p{
+    font-family: 'Roboto', sans-serif;
+
+}
+.block:hover{
+    cursor: not-allowed;
+}
+

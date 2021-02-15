@@ -1,0 +1,11 @@
+.formulario input{
+    margin: 10px 1px;
+
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #28a745;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(4, 241, 63, 0.25);
+}
