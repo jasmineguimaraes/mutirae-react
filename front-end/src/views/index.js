@@ -20,12 +20,12 @@ function Index() {
 								</p>
 								<div class="d-grid gap-2 d-md-block">
 									<a href="/inscreverse">
-										<buton
+										<button
 											class="btn btn-success btn-lg w-50 m-4"
 											type="button"
 										>
 											Cadastre-se
-										</buton>
+										</button>
 									</a>
 								</div>
 

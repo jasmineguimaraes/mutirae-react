@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { login } from "../redux/action/login";
 
-import '../css/header/header.css'
 import '../css/login/login.css'
 
 
@@ -8,9 +9,25 @@ class LoginBox extends React.Component{
     constructor(){
         super();
         this.state={
-            login: ''
+            login: '',
+            nome: '',
+            senha: ''
         }
     }
+
+    handleChange = (e) =>{
+        this.setState({
+            [e.target.id]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        //Fazer a verificaçao do usuario no bd
+        this.props.login(true);
+        this.setState({ nome: "", senha: "" });
+    }
+
     render(){
         const login = this.state.login == 'erro'
         let divStyle = {}
@@ -24,17 +41,17 @@ class LoginBox extends React.Component{
 
         return(
             <div id="telaLogin" style={divStyle}>
-                <div className={"wrapper " + this.state.login != 'erro'? 'fadeInDown': ''}>
+                <div className={this.state.login != 'erro'? 'wrapper fadeInDown': 'wrapper'}>
                     <div id="formContent">
                         <i id="icoIMG" className="far fa-times-circle"></i>
-                    
-                        <div className={"first " + this.state.login != 'erro'? 'fadeInDown': ''}>
+                        <br/>
+                        <div className={this.state.login != 'erro'? 'first fadeInDown': 'first'}>
                         </div>
             
-                        <form action="/autenticar" method="post">
-                            <input type="text" id="login" className={"input-text second " + this.state.login != 'erro'? 'fadeInDown': ''} name="login" placeholder="login"/>
-                            <input type="password" id="password" className={"input-text third " + this.state.login != 'erro'? 'fadeInDown': ''} name="senha" placeholder="password"/>
-                            <input type="submit" className={"btn-login fourth" + this.state.login != 'erro'? 'fadeInDown': ''} value="Log In"/>
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="text" id="nome" onChange={this.handleChange} className={this.state.login != 'erro'? 'fadeInDown input-text second ': 'input-text second'} name="login" placeholder="login"/>
+                            <input type="password" id="senha" onChange={this.handleChange} className={this.state.login != 'erro'? 'input-text third fadeInDown': 'input-text third'} name="senha" placeholder="password"/>
+                            <input type="submit" className={this.state.login != 'erro'? 'btn-login fourth fadeInDown': 'btn-login fourth'} value="Log In"/>
                         </form>
                         {this.state.login == 'erro'? <span className="msgErro fadeInDown">Erro na Autenticação</span>:""}
                         <div id="formFooter">
@@ -49,4 +66,7 @@ class LoginBox extends React.Component{
     
 }
 
-export default LoginBox;
+const mapDispatchToProps = dispatch => ({
+    login: isLogged => dispatch(login(isLogged))
+})
+export default connect(null, mapDispatchToProps)(LoginBox);
