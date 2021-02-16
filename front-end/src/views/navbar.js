@@ -83,12 +83,12 @@ class Navbar extends React.Component {
 								</Link>
 							</li>
 							<li class="nav-item">
-								<Link class="nav-link link-block " to="#">
+								<Link class="nav-link link-block " to="/lixo">
 									O problema do lixo
 								</Link>
 							</li>
 							<li class="nav-item">
-								<Link class="nav-link link-block" to="#">
+								<Link class="nav-link link-block" to="/guia">
 									Como separar o lixo?
 								</Link>
 							</li>

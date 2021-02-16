@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { connect } from 'react-redux';
 import { login } from "../redux/action/login";
+import history from "../history"
 
 import '../css/login/login.css'
 
@@ -39,6 +40,7 @@ class LoginBox extends React.Component{
           */
         this.props.login(true);
         this.setState({ nome: "", senha: "" });
+        history.push('/timeline')
     }
 
     render(){

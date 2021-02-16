@@ -1,11 +1,23 @@
 import React from "react";
 //import axios from 'axios';
+import $ from "jquery";
+
 import history from "../../history"
 
 import { connect } from "react-redux";
 import { login } from "../../redux/action/login";
 
 class Menu extends React.Component {
+
+	componentDidMount= () => {
+		$(document).ready(function () {
+			$('#sidebarCollapse').on('click', function () {
+				$('#sidebar').toggleClass('active');
+				console.log('Eu cliquei nele');
+			});
+		})
+	}
+
 	handleClick = (e) => {
 		e.preventDefault();
 		this.props.login(false);
@@ -20,7 +32,7 @@ class Menu extends React.Component {
 						<a class="menuItem" href="/timeline">
 							Home
 						</a>
-						<a class="menuItem" onClick={this.handleClick}>
+						<a class="menuItem" href='#'onClick={this.handleClick}>
 							Sair
 						</a>
 					</div>
