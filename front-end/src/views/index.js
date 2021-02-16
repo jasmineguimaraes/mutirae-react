@@ -33,8 +33,9 @@ function Index() {
 						</div>
 						<div class="mt-5 col-md-6 p-5 d-none d-md-block">
 							<img
-								class=" img-fluid rounded"
-								src="/img/natureIMGR.jpg"
+								class=" img-fluid"
+								src="/img/undraw_environment_iaus.svg"
+								style={{width: '80%'}}
 								alt=""
 							/>
 						</div>
@@ -54,10 +55,7 @@ function Index() {
 									mutirão diferente e de forma simples? Ajudar
 									um vizinho idoso, a descartar o lixo de
 									forma correta e segura. Começando pela
-									separação do lixo, entre orgânicos e não
-									orgânicos. Assim evita que a lixeira dentro
-									de casa encha mais rápido, evitando sair de
-									casa todo dia para o descarte do lixo.
+									separação do lixo, 
 								</p>
 								<div class="d-flex justify-content-center">
 									<a
@@ -71,10 +69,12 @@ function Index() {
 						</div>
 						<div class="col-md-6 d-none d-md-block">
 							<img
-								class="animeLeft img-fluid rounded"
-								src="/img/naturezaLataR.jpg"
+								class="animeLeft img-fluid"
+								src="/img/undraw_community_8nwl.svg"
+								style={{width: '80%'}}
 								alt=""
 							/>
+							<br/>
 						</div>
 					</div>
 				</div>
@@ -84,8 +84,9 @@ function Index() {
 					<div class="row" style={{height:"400px"}}>
 						<div class="col-md-6  d-none d-md-block">
 							<img
-								class="animeRight img-fluid rounded"
-								src="/img/naturezaLixoR.jpg"
+								class="animeRight img-fluid"
+								src="/img/undraw_social_distancing_2g0u.svg"
+								style={{width: '80%'}}
 								alt=""
 							/>
 						</div>
@@ -100,6 +101,7 @@ function Index() {
 									altas da comunidade. Onde o lixo acumula
 									regularmente, trazendo muita sujeira, mau
 									cheiro, bichos na região.
+									
 								</p>
 								<div class="d-flex justify-content-center">
 									<a
@@ -108,6 +110,8 @@ function Index() {
 									>
 										Veja mais
 									</a>
+									<br/>
+									<br/>
 								</div>
 							</div>
 						</div>

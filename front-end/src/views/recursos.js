@@ -8,13 +8,17 @@ function Recursos(){
                 <div class="position-absolute top-50 start-50"></div>
                 <div class="container">
                     <div class="col">
-                        <h2></h2>
+                    <h1 style={{ color: '#5867F0', 'text-align':'center' }}>Seja um voluntário</h1>
                         <figure class="figure">
-                            <img src="/img/voluntario1.png" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas 
-                                arredondadas, em uma figure."/>
-                            <figcaption class="figure-caption text-right"></figcaption>
+                            <div class="text-center">
+                                <br/>
+                                <img src="/img/undraw_outdoors_amdn.svg" style={{width: '70%'}} class="figure-img img-fluid img-center" alt="Mão segurando um pouco de terra com plantas"/>
+                                <figcaption class="figure-caption text-right"></figcaption>
+                                <br/>
+                            </div>
                         </figure>
                         <br/>
+                        
                         <h4>Deseja fazer a diferença na sua comunidade?</h4>
                         <p>Então você encontrou o lugar certo para se juntar a outros voluntários dispostos a mudar, começando por
                             pequenas ações, a situação do descarte irregular de resíduos sólidos, seja atuando na sua própria comunidade, seja ajudando nas comunidades próximas à você!
