@@ -33,14 +33,21 @@ class Cadastro extends React.Component{
     //<span class="text text-danger">* Nome de usuário errado</span>
     handleSubmit = (e) => {
         e.preventDefault()
+        let dados = []
+            dados.push({
+            nome_usuario: this.state.nome,
+            senha_usuario: this.state.senha,
+            cep: this.state.cep,
+            numero_usuario: this.state.endNum,
+            cidade_usuario: this.state.cidade,
+            endereco_usuario: this.state.endereco,
+            complemento_usuario: this.state.endComp,
+        });
         axios({
             method: "POST",
-            data: {
-              username: this.state.nome,
-              password: this.state.senha,
-            },
+            data: dados,
             withCredentials: true,
-            url: "http://localhost:4000/register",
+            url: "http://localhost:4000/users/cadastrar",
           }).then((res) => console.log(res));
         };
 

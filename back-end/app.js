@@ -65,7 +65,7 @@ app.use(passport.session());
 
 app.use('/login', loginRouter);  // ADICIONADO -----------------------------------------
 app.use('/mutiroes', mutiroesRouter)
-app.use('/users',authenticationMiddleware, usersRouter);  // Rota privada  
+app.use('/users', usersRouter);  // Rota privada  
 app.use('/',authenticationMiddleware, indexRouter);  // Rota privada     Mais genérica em baixo
 
 
