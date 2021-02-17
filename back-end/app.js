@@ -19,6 +19,7 @@ function authenticationMiddleware(req, res, next) {   // Faz com que a rota seja
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const loginRouter = require('./routes/login');  // ADICIONADO --------------------------
+const mutiroesRouter = require('./routes/mutiroes')
 
 var app = express();
 
@@ -63,6 +64,7 @@ app.use(passport.session());
 // --------------------------
 
 app.use('/login', loginRouter);  // ADICIONADO -----------------------------------------
+app.use('/mutiroes', mutiroesRouter)
 app.use('/users',authenticationMiddleware, usersRouter);  // Rota privada  
 app.use('/',authenticationMiddleware, indexRouter);  // Rota privada     Mais genérica em baixo
 

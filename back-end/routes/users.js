@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+	const db = require("../db");
+	//res.render('posts.ejs', {dados:result})
+    db.query('SELECT * FROM usuarios', (error, result)=>{
+		res.json({dados: result})
+	})
+})
 
 module.exports = router;

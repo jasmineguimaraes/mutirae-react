@@ -11,6 +11,7 @@ class LoginBox extends React.Component {
 	constructor() {
 		super();
 		this.state = {
+			errors: {},
 			login: "",
 			nome: "",
 			senha: "",
@@ -26,7 +27,8 @@ class LoginBox extends React.Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		//Fazer a verificaçao do usuario no bd
-		axios
+		if (this.validate()){
+            axios
 			.post("http://localhost:4000/login", {
 				username: this.state.nome,
 				password: this.state.senha,
@@ -41,8 +43,31 @@ class LoginBox extends React.Component {
 					alert(res.data.message);
 					window.location.reload();
 				}
-			});
+			});}
 	};
+
+	validate() {
+		let name = this.state.nome;
+		let senha = this.state.senha;
+		let errors = {};
+
+		let isValid = true;
+
+		if (!name) {
+			isValid = false;
+
+			errors["name"] = "Please enter your name.";
+		}
+		if (!senha) {
+			isValid = false;
+
+			errors["password"] = "Please enter your password.";
+		}
+		this.setState({
+			errors: errors,
+		});
+		return isValid;
+	}
 
 	render() {
 		const login = this.state.login == "erro";
@@ -88,6 +113,7 @@ class LoginBox extends React.Component {
 								name="login"
 								placeholder="login"
 							/>
+                            <div className="text-danger">{this.state.errors.name}</div>
 							<input
 								type="password"
 								id="senha"
@@ -100,6 +126,7 @@ class LoginBox extends React.Component {
 								name="senha"
 								placeholder="password"
 							/>
+                            <div className="text-danger">{this.state.errors.password}</div>
 							<input
 								type="submit"
 								className={
