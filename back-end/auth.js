@@ -25,13 +25,12 @@ module.exports = function (passport) {
             try {
                 const db = require('./db');
                 const user = await db.findUser(username);      //"SELECT"
- 
                 // usuário inexistente
-                if (!user) { return done(null, false) }
+                if (!user) { return done(null, false, { message: 'Incorrect username.' }) }
  
                 // comparando as senhas
                 const isValid = bcrypt.compareSync(password, user.password);
-                if (!isValid) return done(null, false)
+                if (!isValid) return done(null, false, { message: 'Incorrect password.' })
                 
                 return done(null, user)
             } catch (err) {

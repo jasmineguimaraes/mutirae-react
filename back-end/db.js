@@ -3,8 +3,8 @@ async function connect() {
         return global.connection;
  
     const mysql = require("mysql2/promise");
-    const connection = await mysql.createConnection(`mysql://${process.env.MYSQL_USER}:@${process.env.MYSQL_HOST}:${process.env.MYSQL_PORT}/${process.env.MYSQL_DB}`);
-    console.log("Conectou no MySQL!");
+    const connection = await mysql.createConnection(`mysql://${process.env.MYSQL_USER}:${process.env.MYSQL_PASSWORD}@${process.env.MYSQL_HOST}:${process.env.MYSQL_PORT}/${process.env.MYSQL_DB}`);
+    console.log("Conectou no MySQL! Db: "+ process.env.MYSQL_DB);
     global.connection = connection;
     return connection;
 }

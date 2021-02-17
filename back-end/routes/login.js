@@ -9,14 +9,28 @@ router.get('/', (req, res, next) => {
     else
         res.render('login', { message: null });
 });
- 
+
+/*
+router.post('/', passport.authenticate('local'), function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    console.log(req.user);
+  })
+*/
+
+
 /* POST login page */
-router.post('/',
-    passport.authenticate('local', { 
-        successRedirect: '/', 
-        failureRedirect: '/login?fail=true' 
-    })
-);
+router.post('/', function(req, res, next) {
+    passport.authenticate('local', function(err, user, info) {
+      if (err) { return next(err); }
+      if (!user) { return res.json({ success: false, message: info.message }); }
+      req.logIn(user, function(err) {
+        if (err) { return res.json({ success: false, message: loginErr }); }
+        return res.json({ success: true, message: "authentication succeeded" });
+      });
+    })(req, res, next);
+  });
+
 
 /* app.post("/login", (req,res, next) => {
     passport.authenticate("local", (err, user, info) => {
