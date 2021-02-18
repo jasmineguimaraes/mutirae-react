@@ -43,7 +43,7 @@ class LoginBox extends React.Component {
 					alert(res.data.message);
 					window.location.reload();
 				}
-			});}
+			});} // criar um else para o caso de não conseguir logar
 	};
 
 	validate() {

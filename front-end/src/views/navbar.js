@@ -67,6 +67,9 @@ class Navbar extends React.Component {
 						/>
 					</Link>
 
+					<Link to="/" class="navbar-brand">
+						<a  class='navbar-logo' style={{'font-family':'Fredoka One, cursive', 'font-size':'2.3rem', color:'#fafafa' }}>Mutiraê</a>
+					</Link>
 					<button
 						class="navbar-toggler"
 						data-toggle="collapse"
@@ -79,19 +82,19 @@ class Navbar extends React.Component {
 						<ul class="navbar-nav ml-auto align-items-center ">
 							<li class="nav-item">
 								<Link class="nav-link" to="/recursos">
-									Seja um voluntário
+									Comece um mutirão
 								</Link>
 							</li>
-							<li class="nav-item">
+							{/*<li class="nav-item">
 								<Link class="nav-link link-block " to="/lixo">
 									O problema do lixo
 								</Link>
-							</li>
+							</li>*/}
 							<li class="nav-item">
 								<Link class="nav-link link-block" to="/guia">
 									Como separar o lixo?
 								</Link>
-							</li>
+		</li> 
 
 							<li class="nav-item">
 								<Link class="nav-link" to="/sobreNos">

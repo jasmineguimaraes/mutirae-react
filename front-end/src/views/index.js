@@ -10,13 +10,10 @@ function Index() {
 					<div class="row">
 						<div class="col-md-6 d-flex">
 							<div class="align-self-center">
-								<h1 class="display-4">Cuidados com o lixo</h1>
+								<h1 class="display-4">Se junte aos seus vizinhos</h1>
 								<p>
-									Quando o lixo é recolhido de forma regular,
-									toda a comunidade é beneficiada. Melhorando
-									o aspecto do ambiente onde se vive, evitando
-									doenças e aparecimento de animais
-									indesejados.
+									Quando trabalhamos em conjunto com a nossa comunidade conseguimos bons resultados, 
+									cadastre-se na Mutiraê e mobilize seus vizinhos para realizar ações em prol de todos.
 								</p>
 								<div class="d-grid gap-2 d-md-block">
 									<a href="/inscreverse">
@@ -34,8 +31,8 @@ function Index() {
 						<div class="mt-5 col-md-6 p-5 d-none d-md-block">
 							<img
 								class=" img-fluid"
-								src="/img/undraw_environment_iaus.svg"
-								style={{width: '80%'}}
+								src="/img/Team work_Monochromatic.svg"
+								style={{width: '100%'}}
 								alt=""
 							/>
 						</div>
@@ -48,21 +45,17 @@ function Index() {
 					<div class="row" style={{height:"400px"}}>
 						<div class="col-md-6 d-flex">
 							<div class="align-self-center animeRight">
-								<h2>Mutirão da ajuda</h2>
+								<h2>Mutirão do Barra Vela</h2>
 								<p>
-									Estamos vivendo em época de pandemia. Como
-									não podemos aglomerar, que tal fazer um
-									mutirão diferente e de forma simples? Ajudar
-									um vizinho idoso, a descartar o lixo de
-									forma correta e segura. Começando pela
-									separação do lixo, 
+									Organizamos o mutirão de separação de lixo na região do Barra Vela em Ramos - RJ, como nossa ação piloto. Caso você seja um morador da região, cadastre-se e se junte a seus vizinhos para melhorar a situação do lixo perto de sua casa! 
+									Use o Guia de separação de lixo para aprender a melhor maneira de realizar ação, convide seus amigos e vizinhos a participar.
 								</p>
 								<div class="d-flex justify-content-center">
 									<a
 										class=" btn btn-outline-success btn-lg "
 										href=""
 									>
-										Veja mais
+										Saiba mais
 									</a>
 								</div>
 							</div>
@@ -70,8 +63,8 @@ function Index() {
 						<div class="col-md-6 d-none d-md-block">
 							<img
 								class="animeLeft img-fluid"
-								src="/img/undraw_community_8nwl.svg"
-								style={{width: '80%'}}
+								src="/img/Team Work_Isometric.svg"
+								style={{width: '100%'}}
 								alt=""
 							/>
 							<br/>
@@ -85,34 +78,19 @@ function Index() {
 						<div class="col-md-6  d-none d-md-block">
 							<img
 								class="animeRight img-fluid"
-								src="/img/undraw_social_distancing_2g0u.svg"
-								style={{width: '80%'}}
+								src="/img/Wearing a mask _Two Color.svg"
+								style={{width: '100%'}}
 								alt=""
 							/>
 						</div>
 						<div class="col-md-6 d-flex">
 							<div class="align-self-center animeLeft">
-								<h2>Área inicial analisada</h2>
+								<h2>Seja consciente</h2>
 								<p>
-									Começamos o no projeto no Bairro Barra Vela,
-									em Ramos, no subúrbio do Rio de Janeiro. A
-									comunidade sofre regularmente com a falta de
-									coleta de lixo, ainda mais nas áreas mais
-									altas da comunidade. Onde o lixo acumula
-									regularmente, trazendo muita sujeira, mau
-									cheiro, bichos na região.
+									Estamos vivendo num período que atividades presenciais são um grande risco para a saúde dos envolvidos. Então, enquanto estivermos durante a pandemia de COVID-19, não organize mutirões que gerem aglomerações. Preze por sua saúde e pela saúde dos seus vizinhos. 
 									
 								</p>
-								<div class="d-flex justify-content-center">
-									<a
-										class="btn btn-outline-success btn-lg"
-										href=""
-									>
-										Veja mais
-									</a>
-									<br/>
-									<br/>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -122,30 +100,16 @@ function Index() {
 						<div class="row">
 							<div class="col-md-6 animeTop">
 								<img class="img-fluid" src="" alt="" />
-								<h4>Participe você também/Junte-se a nós</h4>
+								<h4>Precisando de ajuda?</h4>
 								<p>
-									Mutiraê é uma plataforma jovem focada na
-									conscientização das pessoas sobre o meio
-									ambiente. Através de mutirões, podemos
-									ajudar uma comunidade ou nossos vizinhos.
-									Trabalhamos com a Associação de Moradores da
-									comunidade Barra Vela, que nos auxilia em
-									ações na comunidade.
+									Pode ser um problema na sua casa, na sua rua ou no seu bairro. Crie um mutirão e chame seus vizinhos para ajudarem.
 								</p>
 							</div>
 							<div class="col-md-6 animeTop">
 								<img class="img-fluid" src="" alt="" />
-								<h4>Reciclagem</h4>
+								<h4>Ajude seus vizinhos!</h4>
 								<p>
-									A maior parte do lixo recolhido é composta
-									de materiais recicláveis. Um comportamento
-									muito comum em uma sociedade que ainda não
-									tem o hábito de separar o lixo e pensar no
-									meio ambiente. Por anos, o Brasil deixa de
-									ganhar 14 bilhões por falta de reciclagem
-									adequada do lixo. Pense onde esse dinheiro
-									poderia ser investido, se o lixo fosse
-									descartado e reciclado de forma correta.l!
+									De vez em quando passamos por problemas que com algumas mãozinhas extras se resolveriam mais facilmente. Ao ajudar seu vizinho você está contribuíndo pra comunidade.  
 								</p>
 							</div>
 						</div>

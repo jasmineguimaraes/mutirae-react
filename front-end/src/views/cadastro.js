@@ -55,8 +55,11 @@ class Cadastro extends React.Component{
         return(
             <div class="row justify-content-center align-items-center formulario">
                 <div class="col-md-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <br/>
                     <fieldset>
-                        <legend class="h1 titulo-ins">Cadastro de Usuário</legend>
+                        <legend class="h1 titulo-ins" style={{'font-weight':'500'}}>Cadastre-se</legend>
                         <form class="row g-3 form" onSubmit={this.handleSubmit}>
                             <div class="col-md-12">
                                 <input style={{width:"300px"}} type="text" onChange={this.handleNomeChange} value={this.state.nome} name="nome" placeholder="Nome Completo" class="form-control" id="inputEmail4"/>
@@ -69,7 +72,7 @@ class Cadastro extends React.Component{
                                 <input style={{width:"300px"}} type="password" onChange={this.handleSenhaConfChange} value={this.state.senhaConf} name="csenha" placeholder="Confirmar Senha" class="form-control" id="inputPassword4"/>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" style={{width:"200px"}} onChange={this.handleCepChange} value={this.state.cep} name="cep" class="form-control" id="inputCity" placeholder="Cep"/>
+                                <input type="text" style={{width:"200px"}} onChange={this.handleCepChange} value={this.state.cep} name="cep" class="form-control" id="inputCity" placeholder="CEP"/>
                             </div>
                             <div class="col-md-12">
                                 <input style={{width:"200px"}} type="text" onChange={this.handleEndNumChange} value={this.state.endNum} name="numero" class="form-control" id="inputCity" placeholder="Número"/>
@@ -86,10 +89,16 @@ class Cadastro extends React.Component{
                             </div>
 
                             <div class="col-12">
-                                <button type="submit" class="btn btn-success w-100">Cadastrar</button>
-                            </div>
+                                <div class="text-center">
+                                <button type="submit" class=" btn btn-success">Cadastrar</button>
+                                </div>
+                                </div>
+                                
+                            
                         </form>
                     </fieldset>
+                    </div>
+                    </div>
                 </div>
             </div>
         )

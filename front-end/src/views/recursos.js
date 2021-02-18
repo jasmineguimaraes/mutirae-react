@@ -8,25 +8,25 @@ function Recursos(){
                 <div class="position-absolute top-50 start-50"></div>
                 <div class="container">
                     <div class="col">
-                    <h1 style={{ color: '#5867F0', 'text-align':'center' }}>Seja um voluntário</h1>
+                    <h1 style={{ color: '#5867F0', 'text-align':'center' }}>Comece um mutirão</h1>
                         <figure class="figure">
                             <div class="text-center">
                                 <br/>
-                                <img src="/img/undraw_outdoors_amdn.svg" style={{width: '70%'}} class="figure-img img-fluid img-center" alt="Mão segurando um pouco de terra com plantas"/>
+                                <img src="/img/Email campaign_Monochromatic.svg" style={{width: '60%'}} class="figure-img img-fluid img-center" alt="Mão segurando um pouco de terra com plantas"/>
                                 <figcaption class="figure-caption text-right"></figcaption>
                                 <br/>
                             </div>
                         </figure>
                         <br/>
                         
-                        <h4>Deseja fazer a diferença na sua comunidade?</h4>
-                        <p>Então você encontrou o lugar certo para se juntar a outros voluntários dispostos a mudar, começando por
-                            pequenas ações, a situação do descarte irregular de resíduos sólidos, seja atuando na sua própria comunidade, seja ajudando nas comunidades próximas à você!
+                        <h4>Deseja trazer mudança para sua comunidade?</h4>
+                        <p>Então você encontrou o lugar certo para começar, nós vamos te ajudar a se organizar e convidar seus vizinhos para ajudar a comunidade. 
+                            Crie um mutirão e chame seus vizinhos para começar a realizar a mudança que vocês precisam.
                         </p>
                         <p>Vamos ajudar quem precisa!</p>
                         <br/>
-                        <h4>Como ser um voluntário?</h4>
-                        <p>Para ser um voluntário é bem simples, clique nos links abaixo para saber mais! </p>
+                        <h4>Como começar um mutirão?</h4>
+                        <p>É bem simples, vem com a gente! </p>
                         <br/>
                         <div class="accordion" id="accordionExample">
                             <div class="card">
@@ -39,7 +39,8 @@ function Recursos(){
                                 </div>
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Clique no botão "Cadastre-se" localizado no final desta página, fornceça seus dados pessoais e cria sua conta para poder acessar todo o conteúdo do site.
+                                        Clique no botão "Cadastre-se" localizado no final desta página, forneça 
+                                        seus dados pessoais e crie sua conta para poder acessar todo o conteúdo do site.
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +54,8 @@ function Recursos(){
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Depois de já estar logado(a) no site, você poderá acessar os mutiões cadastrados e se voluntariar para participar deles, ou mesmo criar seu próprio mutirão e compartilhar através das redes sociais.
+                                        Depois de já estar logado no site, você poderá acessar os mutirões cadastrados, confirmar sua participação em mutirões, 
+                                        ou até mesmo criar seu próprio mutirão e compartilhar através das redes sociais.
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +69,8 @@ function Recursos(){
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Depois de se inscrever, você receberá notificações no email cadastrado, com lembrentes e informações relevantes sobre os mutirões. Não se esqueça de compartilhar e chamar mais gente disposta a ajudar!
+                                        Depois de se inscrever, você receberá notificações no e-mail cadastrado, com lembrentes e 
+                                        informações relevantes sobre os mutirões. Não se esqueça de compartilhar e convidar seus vizinhos e amigos.
                                     </div>
                                 </div>
                             </div>
