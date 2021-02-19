@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios'
+import { connect } from "react-redux";
+
 
 import "../../css/cadastro/formulario.css"
 
@@ -7,7 +9,7 @@ class Perfil extends React.Component{
     constructor(){ 
         super();
         this.state={
-            nome:"",
+            nomeCompleto:"",
             senha:"",
             senhaConf:"",
             cep:"",
@@ -16,7 +18,7 @@ class Perfil extends React.Component{
             endComp:"",
             cidade:"",
         };
-        this.handleNomeChange = this.handleChange.bind(this, 'nome');
+        this.handleNomeCompletoChange = this.handleChange.bind(this, 'nomeCompleto');
         this.handleSenhaChange = this.handleChange.bind(this, 'senha');
         this.handleSenhaConfChange = this.handleChange.bind(this, 'senhaConf');
         this.handleCepChange = this.handleChange.bind(this, 'cep');
@@ -33,14 +35,21 @@ class Perfil extends React.Component{
     //<span class="text text-danger">* Nome de usuário errado</span>
     handleSubmit = (e) => {
         e.preventDefault()
+        let dados = [];
+			dados.push({
+                username: this.props.userLogged,
+				nome_completo: this.state.nomeCompleto,
+				senha_usuario: this.state.senha,
+				cep: this.state.cep,
+				numero_usuario: this.state.endNum,
+				cidade_usuario: this.state.cidade,
+				endereco_usuario: this.state.endereco,
+				complemento_usuario: this.state.endComp,
+			});
         axios({
-            method: "POST",
-            data: {
-              username: this.state.nome,
-              password: this.state.senha,
-            },
-            withCredentials: true,
-            url: "http://localhost:8000/api/v1",
+            method: "PUT",
+            data: dados,
+            url: "https://mutirae-backend.herokuapp.com/users/atualizar",
           }).then((res) => console.log(res));
         };
 
@@ -53,7 +62,7 @@ class Perfil extends React.Component{
                             <legend class="h1 titulo-ins">Editar Cadastro</legend>
                             <form class="row g-3 form" onSubmit={this.handleSubmit}>
                                 <div class="col-md-12">
-                                    <input style={{width:"300px"}} type="text" onChange={this.handleNomeChange} value={this.state.nome} name="nome" placeholder="Nome Completo" class="form-control" id="inputEmail4"/>
+                                    <input style={{width:"300px"}} type="text" onChange={this.handleNomeCompletoChange} value={this.state.nome} name="nome" placeholder="Nome Completo" class="form-control" id="inputEmail4"/>
                                 </div>
 
                                 <div class="col-md-12">
@@ -91,4 +100,8 @@ class Perfil extends React.Component{
     }
 }
 
-export default Perfil;
+const mapStateToProps = ({ user: { userLogged } }) => ({
+	userLogged,
+});
+
+export default connect(mapStateToProps)(Perfil)

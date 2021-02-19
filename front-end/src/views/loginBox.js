@@ -30,7 +30,7 @@ class LoginBox extends React.Component {
 		//Fazer a verificaçao do usuario no bd
 		if (this.validate()){
             axios
-			.post("http://localhost:4000/login", {
+			.post("https://mutirae-backend.herokuapp.com/login", {
 				username: this.state.nome,
 				password: this.state.senha,
 			})
@@ -117,7 +117,7 @@ class LoginBox extends React.Component {
 										: "input-text second"
 								}
 								name="login"
-								placeholder="login"
+								placeholder="usuário"
 							/>
                             <div className="text-danger">{this.state.errors.name}</div>
 							<input
@@ -130,7 +130,7 @@ class LoginBox extends React.Component {
 										: "input-text third"
 								}
 								name="senha"
-								placeholder="password"
+								placeholder="senha"
 							/>
                             <div className="text-danger">{this.state.errors.password}</div>
 							<input

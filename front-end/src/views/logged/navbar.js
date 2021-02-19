@@ -24,13 +24,13 @@ function Navbar({userLogged}) {
 					</a>
 				</li>
 				<li>
-					<a id="rede" href="/Apprede">
-						Rede
+					<a id="perfil" href="/perfil">
+						Perfil
 					</a>
 				</li>
 				<li>
-					<a id="perfil" href="/perfil">
-						Perfil
+					<a id="block" href="/Apprede">
+						Rede
 					</a>
 				</li>
 

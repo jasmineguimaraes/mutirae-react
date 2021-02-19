@@ -39,8 +39,21 @@ function Recursos(){
                                 </div>
                                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <div class="card-body">
-                                        Clique no botão "Cadastre-se" localizado no final desta página, forneça 
+                                        
+                                        Para se cadastrar no Mutirae, clique no botão abaixo, forneça 
                                         seus dados pessoais e crie sua conta para poder acessar todo o conteúdo do site.
+                                        <br/>
+                                        <br/>
+                                        <div className='text-center'>
+                                        <a href="/inscreverse">
+                                            <button
+                                                class="btn btn-success btn-md"
+                                                type="button"
+                                            >
+                                                Cadastre-se
+                                            </button>
+									    </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

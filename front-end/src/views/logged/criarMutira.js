@@ -1,12 +1,12 @@
 import React from "react";
-import DatePicker,{ registerLocale } from "react-datepicker";
-import pt from "date-fns/locale/pt-BR"
+import DatePicker, { registerLocale } from "react-datepicker";
+import pt from "date-fns/locale/pt-BR";
 import { connect } from "react-redux";
 import axios from "axios";
 import history from "../../history";
 
 import "react-datepicker/dist/react-datepicker.css";
-registerLocale("pt-BR", pt)
+registerLocale("pt-BR", pt);
 class CriarMutira extends React.Component {
 	constructor() {
 		super();
@@ -24,12 +24,21 @@ class CriarMutira extends React.Component {
 		this.handleDescChange = this.handleChange.bind(this, "desc");
 	}
 
+	_handleReaderLoaded = (readerEvt) => {
+		let binaryString = readerEvt.target.result;
+		this.setState({
+			image: btoa(binaryString),
+		});
+	};
+
 	onImageChange = (event) => {
 		if (event.target.files && event.target.files[0]) {
 			let img = event.target.files[0];
-			this.setState({
-				image: img,
-			});
+			if (img) {
+				const reader = new FileReader();
+				reader.onload = this._handleReaderLoaded.bind(this);
+				reader.readAsBinaryString(img);
+			}
 		}
 	};
 
@@ -46,7 +55,7 @@ class CriarMutira extends React.Component {
 		let dados = [];
 		dados.push({
 			titulo: this.state.titulo,
-			data: this.state.date.toISOString().slice(0, 19).replace('T', ' '),
+			data: this.state.date.toISOString().slice(0, 19).replace("T", " "),
 			img: this.state.image,
 			local: this.state.local,
 			texto: this.state.desc,
@@ -55,8 +64,7 @@ class CriarMutira extends React.Component {
 		axios({
 			method: "POST",
 			data: dados,
-			withCredentials: true,
-			url: "http://localhost:4000/mutiroes/salvar",
+			url: "https://mutirae-backend.herokuapp.com/mutiroes/salvar",
 		}).then((res) => {
 			alert(res.data.message);
 			history.push("/Appmutira");
@@ -84,11 +92,11 @@ class CriarMutira extends React.Component {
 						<div class="form-group">
 							<label for="exampleFormControlFile1">Data</label>
 							<DatePicker
-                                locale="pt-BR"
-                                showTimeSelect
-                                timeFormat="p"
-                                timeIntervals={15}
-                                dateFormat="Pp"
+								locale="pt-BR"
+								showTimeSelect
+								timeFormat="p"
+								timeIntervals={15}
+								dateFormat="Pp"
 								selected={this.state.date}
 								onChange={this.handleDataChange}
 								name="data-mutira"
@@ -111,7 +119,7 @@ class CriarMutira extends React.Component {
 									"max-width": "300px",
 									"max-height": "200px",
 								}}
-								src={this.state.image}
+								src={`data:image/png;base64,${this.state.image}`}
 							/>
 							<input
 								type="file"
@@ -120,6 +128,7 @@ class CriarMutira extends React.Component {
 								type="file"
 								class="form-control-file"
 								id="exampleFormControlFile2"
+								accept=".jpeg .png .jpg"
 							/>
 						</div>
 					</div>

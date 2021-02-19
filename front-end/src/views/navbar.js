@@ -68,7 +68,16 @@ class Navbar extends React.Component {
 					</Link>
 
 					<Link to="/" class="navbar-brand">
-						<a  class='navbar-logo' style={{'font-family':'Fredoka One, cursive', 'font-size':'2.3rem', color:'#fafafa' }}>Mutiraê</a>
+						<a
+							class="navbar-logo"
+							style={{
+								"font-family": "Fredoka One, cursive",
+								"font-size": "2.3rem",
+								color: "#fafafa",
+							}}
+						>
+							Mutiraê
+						</a>
 					</Link>
 					<button
 						class="navbar-toggler"
@@ -94,7 +103,7 @@ class Navbar extends React.Component {
 								<Link class="nav-link link-block" to="/guia">
 									Como separar o lixo?
 								</Link>
-		</li> 
+							</li>
 
 							<li class="nav-item">
 								<Link class="nav-link" to="/sobreNos">
@@ -108,6 +117,15 @@ class Navbar extends React.Component {
 									href="#"
 								>
 									Entrar
+								</a>
+							</li>
+							<li class="nav-item">
+								<a
+									id="cadastro"
+									class="btn btn-light ml-sm-4"
+									href="/inscreverse"
+								>
+									Cadastrar
 								</a>
 							</li>
 						</ul>
