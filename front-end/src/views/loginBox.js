@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { connect } from "react-redux";
 import { login } from "../redux/action/login";
+import { user } from '../redux/action/user'
 import history from "../history";
 
 import "../css/login/login.css";
@@ -37,13 +38,18 @@ class LoginBox extends React.Component {
 				console.log(res.data.success);
 				if (res.data.success) {
 					this.props.login(true);
+					this.props.user(this.state.nome);
 					this.setState({ nome: "", senha: "" });
 					history.push("/timeline");
 				} else {
 					alert(res.data.message);
 					window.location.reload();
 				}
-			});} // criar um else para o caso de não conseguir logar
+			});
+		} else {
+			alert("Dados invalidos!");
+			window.location.reload();
+		}
 	};
 
 	validate() {
@@ -158,5 +164,6 @@ class LoginBox extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
 	login: (isLogged) => dispatch(login(isLogged)),
+	user: (userLogged) => dispatch(user(userLogged)),
 });
 export default connect(null, mapDispatchToProps)(LoginBox);

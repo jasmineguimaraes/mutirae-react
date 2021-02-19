@@ -15,6 +15,7 @@ import Guia from './views/guia'
 import Timeline from './views/logged/timeline'
 import Mutirae from './views/logged/mutirae'
 import Perfil from './views/logged/perfil'
+import CriarMutira from './views/logged/criarMutira'
 
 
 function App({isLogged}) {
@@ -31,6 +32,8 @@ function App({isLogged}) {
         <InsidePagesRoute exact path="/timeline" component={Timeline} />
         <InsidePagesRoute exact path="/Appmutira" component={Mutirae} />
         <InsidePagesRoute exact path="/perfil" component={Perfil} />
+        <InsidePagesRoute exact path="/criarmutira" component={CriarMutira} />
+
 
       </Switch>
     </Router>

@@ -11,7 +11,7 @@ async function connect() {
 
 async function findUser(username) {
     const conn = await connect();
-    const [rows] = await conn.query(`SELECT * FROM users WHERE username=? LIMIT 1`, [username]);
+    const [rows] = await conn.query(`SELECT * FROM usuarios WHERE username=? LIMIT 1`, [username]);
     if (rows.length > 0)
         return rows[0];
     else return null;
@@ -19,7 +19,7 @@ async function findUser(username) {
  
 async function findUserById(id) {
     const conn = await connect();
-    const [rows] = await conn.query(`SELECT * FROM users WHERE id=? LIMIT 1`, [id]);
+    const [rows] = await conn.query(`SELECT * FROM usuarios WHERE id=? LIMIT 1`, [id]);
     if (rows.length > 0)
         return rows[0];
     else return null;

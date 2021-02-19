@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 
-function Navbar() {
+function Navbar({userLogged}) {
 	return (
 		<nav id="sidebar">
 			<div class="sidebar-header">
@@ -14,8 +15,8 @@ function Navbar() {
 					/>
 					<h3>Menu</h3>
 				</div>
+			<h4>Olá, {userLogged}!</h4>
 			</div>
-
 			<ul class="list-unstyled components">
 				<li>
 					<a id="mutiras" href="/Appmutira">
@@ -66,4 +67,8 @@ function Navbar() {
 	);
 }
 
-export default Navbar;
+const mapStateToProps = ({ user: { userLogged } }) => ({
+	userLogged,
+});
+
+export default connect(mapStateToProps)(Navbar);

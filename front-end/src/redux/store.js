@@ -4,9 +4,11 @@ import logger from 'redux-logger'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { loginReducer } from './reducer/login'
+import { userReducer } from './reducer/user'
 
 const rootReducer = combineReducers({
     login:loginReducer,
+    user:userReducer,
 })
 
 const persistConfig = {
